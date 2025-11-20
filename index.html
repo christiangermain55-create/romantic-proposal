@@ -26,20 +26,12 @@
       box-sizing: border-box;
       text-align: center;
       overflow-y: auto;
-      scroll-behavior: smooth;
     }
 
     h1 {
       font-size: 3rem;
       margin-bottom: 20px;
       animation: fadeIn 2s ease-in-out;
-    }
-
-    p {
-      font-size: 1.5rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      animation: fadeIn 3s ease-in-out;
     }
 
     .buttons {
@@ -73,6 +65,17 @@
       z-index: 1000;
     }
 
+    .message {
+      margin-top: 50px;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeIn 2s ease-in-out;
+      display: none;
+    }
+
     @keyframes fall {
       0% {
         transform: translateY(-10%);
@@ -98,14 +101,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>Will You Be My Girlfriend?</h1>
-    <p>
-      From the first moment we met, something clicked. Your smile, your laugh, your presence—
-      they’ve made my days brighter. I created this page just for you. Will you make me the happiest person today?
-    </p>
+    <h1>Will You Be My Girlfriend?<br>Until I make you my wife.</h1>
     <div class="buttons">
-      <button onclick="startHeartRain()">Yes 💖</button>
-      <button onclick="startHeartRain()">No 😢</button>
+      <button onclick="showLove()">Yes 💖</button>
+      <button onclick="showLove()">!No 💖</button>
+    </div>
+
+    <div class="message" id="message">
+      <p>Thank you for accepting to be my girlfriend, mi corazón. You've just made me the happiest person alive.</p>
+      <p>Before I met you, my world felt like it was in dark mode. But ever since we started talking, you brought color and light into it.</p>
+      <p>You've changed me in the most beautiful ways. You make me feel loved, valued, and understood. I know I can trust you with my whole heart.</p>
+      <p>I know this is not the most romantic way to ask to be my girlfriend, but I know</p>
+      <p><code>if (God.presence == true) {
+  System.out.print("We will have a healthy relationship");
+}</code></p>
+      <p>You're not just my girlfriend. You're the blessing I prayed for, and I will do everything to have you by my side forever.</p>
+      <p><code>System.out.println("I promise");</code></p>
+      <p><code>while (breathing == true) {
+  System.out.println("I will love you deeply, cherish you, and honor you with everything I have.");
+  System.out.println("Every day, I’ll try my best to make you the happiest girl on Earth.");
+}</code></p>
+      <p><code>System.out.println("te quiero mucho mami") ❤️</code></p>
+      <p><code>System.exit();</code></p>
     </div>
   </div>
 
@@ -123,7 +140,9 @@
       }, 5000);
     }
 
-    function startHeartRain() {
+    function showLove() {
+      const msg = document.getElementById("message");
+      msg.style.display = "block";
       for (let i = 0; i < 40; i++) {
         setTimeout(createHeart, i * 150);
       }
@@ -131,3 +150,4 @@
   </script>
 </body>
 </html>
+
